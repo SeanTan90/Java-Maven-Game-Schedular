@@ -5,6 +5,7 @@ public class Day {
 	private Game[] games;
 	
 	public Day() {
+		//default no parameter constructor
 		
 	}
 	
@@ -28,6 +29,6 @@ public class Day {
 	}
 	
 	public void setGames(Game[] games) {
-		
+		this.games = games; 
 	}
 }

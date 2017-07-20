@@ -5,8 +5,8 @@ public class Game {
 	private int noOfPlayers;
 	
 	
-	public Game() { // no parameter constructor
-		
+	public Game() { 
+		//default no parameter constructor
 	}
 	
 	public Game(String name, int noOfPlayers) {

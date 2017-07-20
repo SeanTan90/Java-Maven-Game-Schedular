@@ -6,7 +6,7 @@ public class Player {
 	
 	
 	public Player() {
-		
+		//default no parameter constructor
 	}
 	
 	public Player(String name, Game[] games) {

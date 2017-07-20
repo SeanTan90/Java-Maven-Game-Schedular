@@ -5,11 +5,16 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestForSchedular {
-
+	final private String basketball = "basketball";
+	final private String football = "football";
+	final private String tennis = "tennis";
+	final private String badminton = "badminton";
+	final private String sally = "sally";
+	
 	@Test
 	public void addGameSuccess() {
 
-		Game testGame = new Game("basketball",2);
+		Game testGame = new Game(basketball,2);
 		SchedularService testService = new SchedularService();
 		assertEquals("Successful adding of Game",testService.createGame(testGame));
 	}
@@ -17,7 +22,7 @@ public class TestForSchedular {
 	
 	@Test
 	public void addDuplicateGame() {
-		Game testGame = new Game("basketball",2);
+		Game testGame = new Game(basketball,2);
 		SchedularService testService = new SchedularService();
 		testService.createGame(testGame);
 		assertEquals("Game already exist within Game List",testService.createGame(testGame));
@@ -34,7 +39,7 @@ public class TestForSchedular {
 	
 	@Test
 	public void addGameWithoutPlayers() {
-		Game testGame = new Game("basketball",0);
+		Game testGame = new Game(basketball,0);
 		SchedularService testService = new SchedularService();
 		testService.createGame(testGame);
 		assertEquals("No. of players should not be zero",testService.createGame(testGame));
@@ -55,9 +60,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 
 		
 		testService.createGame(tennis);
@@ -73,9 +78,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 
 		
 		testService.createGame(tennis);
@@ -91,9 +96,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 
 		
 		testService.createGame(tennis);
@@ -110,9 +115,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 
 		
 		testService.createGame(tennis);
@@ -152,9 +157,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 		
 		testService.createGame(tennis);
 		
@@ -170,9 +175,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 		
 		testService.createGame(tennis);
 		
@@ -189,9 +194,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketball,2);
+		Game football = new Game(football,3);
+		Game tennis = new Game(tennis,1);
 		
 		testService.createGame(tennis);
 		
