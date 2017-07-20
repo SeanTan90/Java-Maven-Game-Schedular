@@ -5,16 +5,22 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestForSchedular {
-	final private String basketball = "basketball";
-	final private String football = "football";
-	final private String tennis = "tennis";
-	final private String badminton = "badminton";
-	final private String sally = "sally";
+	final private String basketballStr = "basketball";
+	final private String footballStr = "football";
+	final private String tennisStr = "tennis";
+	final private String badmintonStr = "badminton";
+	final private String hockeyStr = "hockey";
+	final private String tomStr = "tom";
+	final private String johnStr = "john";
+	final private String maxStr = "max";
+	final private String janeStr = "jane";
+	final private String sallyStr = "sally";
+	final private String testDayStr = "testDay";
 	
 	@Test
 	public void addGameSuccess() {
 
-		Game testGame = new Game(basketball,2);
+		Game testGame = new Game(basketballStr,2);
 		SchedularService testService = new SchedularService();
 		assertEquals("Successful adding of Game",testService.createGame(testGame));
 	}
@@ -22,7 +28,7 @@ public class TestForSchedular {
 	
 	@Test
 	public void addDuplicateGame() {
-		Game testGame = new Game(basketball,2);
+		Game testGame = new Game(basketballStr,2);
 		SchedularService testService = new SchedularService();
 		testService.createGame(testGame);
 		assertEquals("Game already exist within Game List",testService.createGame(testGame));
@@ -39,7 +45,7 @@ public class TestForSchedular {
 	
 	@Test
 	public void addGameWithoutPlayers() {
-		Game testGame = new Game(basketball,0);
+		Game testGame = new Game(basketballStr,0);
 		SchedularService testService = new SchedularService();
 		testService.createGame(testGame);
 		assertEquals("No. of players should not be zero",testService.createGame(testGame));
@@ -60,9 +66,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 
 		
 		testService.createGame(tennis);
@@ -78,9 +84,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 
 		
 		testService.createGame(tennis);
@@ -96,9 +102,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 
 		
 		testService.createGame(tennis);
@@ -115,16 +121,16 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 
 		
 		testService.createGame(tennis);
 		
 		Game[] gamesTestPlayerPlay = {basketball, football, tennis};
 		
-		Player testPlayer = new Player("tom", gamesTestPlayerPlay);
+		Player testPlayer = new Player(tomStr, gamesTestPlayerPlay);
 		
 		testService.createPlayer(testPlayer);
 		assertEquals("Player already exist within Player List",testService.createPlayer(testPlayer));
@@ -157,15 +163,15 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 		
 		testService.createGame(tennis);
 		
 		Game[] gamesPlayedOnTestDay = {basketball, football, tennis};
 		
-		Day testDay = new Day("testDay",gamesPlayedOnTestDay );
+		Day testDay = new Day(testDayStr,gamesPlayedOnTestDay );
 		assertEquals("Successful adding of Day",testService.createDay(testDay));
 	}
 	
@@ -175,9 +181,9 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 		
 		testService.createGame(tennis);
 		
@@ -194,15 +200,15 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketball,2);
-		Game football = new Game(football,3);
-		Game tennis = new Game(tennis,1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 		
 		testService.createGame(tennis);
 		
 		Game[] gamesPlayedOnTestDay = {basketball, football, tennis};
 		
-		Day testDay = new Day("testDay",gamesPlayedOnTestDay );
+		Day testDay = new Day(testDayStr,gamesPlayedOnTestDay );
 		testService.createDay(testDay);
 		assertEquals("Day already exist within Day List",testService.createDay(testDay));
 	}
@@ -213,15 +219,15 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game("basketball",2);
-		Game football = new Game("football",3);
-		Game tennis = new Game("tennis",1);
+		Game basketball = new Game(basketballStr,2);
+		Game football = new Game(footballStr,3);
+		Game tennis = new Game(tennisStr,1);
 		
 		testService.createGame(tennis);
 		
 		Game[] gamesPlayedOnTestDay = new Game[5];
 		
-		Day testDay = new Day("testDay",gamesPlayedOnTestDay );
+		Day testDay = new Day(testDayStr,gamesPlayedOnTestDay );
 		testService.createDay(testDay);
 		assertEquals("Day's game list should not be null",testService.createDay(testDay));
 	}
@@ -230,11 +236,11 @@ public class TestForSchedular {
 	public void generateGameWiseReportSuccess() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -247,11 +253,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -299,11 +305,11 @@ public class TestForSchedular {
 	public void generatePlayerWiseReportSuccess() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -316,11 +322,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -370,11 +376,11 @@ public class TestForSchedular {
 	public void generateDayWiseReportSuccess() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -387,11 +393,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -441,11 +447,11 @@ public class TestForSchedular {
 	public void generateGameWiseReportOfNonExistantGame() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -458,11 +464,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -510,11 +516,11 @@ public class TestForSchedular {
 	public void generatePlayerWiseReportOfNonExistantPlayer() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -527,11 +533,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -579,11 +585,11 @@ public class TestForSchedular {
 	public void generateDayWiseReportOfNonExistantDay() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -596,11 +602,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -648,11 +654,11 @@ public class TestForSchedular {
 	public void generateGameWiseReportWithEmptyGame() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -665,11 +671,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -717,11 +723,11 @@ public class TestForSchedular {
 	public void generatePlayerWiseReportWithEmptyPlayer() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -734,11 +740,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
@@ -786,11 +792,11 @@ public class TestForSchedular {
 	public void generateDayWiseReportWithEmptyDay() {
 		
 				// Create 5 Game objects
-				Game basketball = new Game("basketball",2);
-				Game football = new Game("football",3);
-				Game tennis = new Game("tennis",1);
-				Game badminton = new Game("badminton",2);
-				Game hockey = new Game("hockey",1);
+				Game basketball = new Game(basketballStr,2);
+				Game football = new Game(footballStr,3);
+				Game tennis = new Game(tennisStr,1);
+				Game badminton = new Game(badmintonStr,2);
+				Game hockey = new Game(hockeyStr,1);
 				
 				
 				
@@ -803,11 +809,11 @@ public class TestForSchedular {
 				
 				
 				// Create 5 Player objects
-				Player tom = new Player("tom", gamesTomPlay);
-				Player john = new Player("john", gamesJohnPlay);
-				Player max = new Player("max", gamesMaxPlay);
-				Player jane = new Player("jane",gamesJanePlay);
-				Player sally = new Player("sally", gamesSallyPlay);
+				Player tom = new Player(tomStr, gamesTomPlay);
+				Player john = new Player(johnStr, gamesJohnPlay);
+				Player max = new Player(maxStr, gamesMaxPlay);
+				Player jane = new Player(janeStr,gamesJanePlay);
+				Player sally = new Player(sallyStr, gamesSallyPlay);
 				
 				
 				//Declare the games of each day
