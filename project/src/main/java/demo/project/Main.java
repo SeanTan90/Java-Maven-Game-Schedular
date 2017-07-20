@@ -33,6 +33,8 @@ public class Main {
 		Player jane = new Player("jane",gamesJanePlay);
 		Player sally = new Player("sally", gamesSallyPlay);
 		
+		// Create a SchedularService object
+		SchedularService service = new SchedularService();
 		
 		//Declare the games of each day
 		Game[] gamesPlayedOnDay1 = {basketball, football};
@@ -48,8 +50,7 @@ public class Main {
 		Day day4 = new Day("day4", gamesPlayedOnDay4);
 		Day day5 = new Day("day5", gamesPlayedOnDay5);
 		
-		// Create a SchedularService object
-		SchedularService service = new SchedularService();
+		
 		
 		// Create 5 games
 		service.createGame(basketball);

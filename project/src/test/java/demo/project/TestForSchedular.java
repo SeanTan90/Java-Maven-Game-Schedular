@@ -120,14 +120,14 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball_test = new Game(basketballStr,2);
-		Game football_test = new Game(footballStr,3);
-		Game tennis_test = new Game(tennisStr,1);
+		Game basketballObject = new Game(basketballStr,2);
+		Game footballObject = new Game(footballStr,3);
+		Game tennisObject = new Game(tennisStr,1);
 
 		
-		testService.createGame(tennis_test);
+		testService.createGame(tennisObject);
 		
-		Game[] gamesTestPlayerPlay = {basketball_test, football_test, tennis_test};
+		Game[] gamesTestPlayerPlay = {basketballObject, footballObject, tennisObject};
 		
 		Player testPlayer = new Player(tomStr, gamesTestPlayerPlay);
 		
@@ -162,13 +162,13 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball_Test = new Game(basketballStr,2);
-		Game football_Test = new Game(footballStr,3);
-		Game tennis_Test = new Game(tennisStr,1);
+		Game objectBasketball = new Game(basketballStr,2);
+		Game objectFootball = new Game(footballStr,3);
+		Game objectTennis = new Game(tennisStr,1);
 		
-		testService.createGame(tennis_Test);
+		testService.createGame(objectTennis);
 		
-		Game[] gamesPlayedOnTestDay = {basketball_Test, football_Test, tennis_Test};
+		Game[] gamesPlayedOnTestDay = {objectBasketball,  objectFootball, objectTennis};
 		
 		Day testDay = new Day(testDayStr,gamesPlayedOnTestDay );
 		assertEquals("Successful adding of Day",testService.createDay(testDay));
@@ -180,13 +180,13 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball_TesT = new Game(basketballStr,2);
-		Game football_TesT = new Game(footballStr,3);
-		Game tennis_TesT = new Game(tennisStr,1);
+		Game basketballClassInstance = new Game(basketballStr,2);
+		Game footballClassInstance = new Game(footballStr,3);
+		Game tennisClassInstance = new Game(tennisStr,1);
 		
-		testService.createGame(tennis_TesT);
+		testService.createGame(tennisClassInstance);
 		
-		Game[] gamesPlayedOnTestDay = {basketball_TesT, football_TesT, tennis_TesT};
+		Game[] gamesPlayedOnTestDay = {basketballClassInstance, footballClassInstance, tennisClassInstance};
 		
 		Day testDay = new Day("",gamesPlayedOnTestDay );
 		assertEquals("Day name should not be empty",testService.createDay(testDay));
