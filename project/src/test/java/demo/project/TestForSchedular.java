@@ -5,17 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class TestForSchedular {
-	final private String basketballStr = "basketball";
-	final private String footballStr = "football";
-	final private String tennisStr = "tennis";
-	final private String badmintonStr = "badminton";
-	final private String hockeyStr = "hockey";
-	final private String tomStr = "tom";
-	final private String johnStr = "john";
-	final private String maxStr = "max";
-	final private String janeStr = "jane";
-	final private String sallyStr = "sally";
-	final private String testDayStr = "testDay";
+	String basketballStr = "basketball";
+	String footballStr = "football";
+	String tennisStr = "tennis";
+	String badmintonStr = "badminton";
+	String hockeyStr = "hockey";
+	String tomStr = "tom";
+	String johnStr = "john";
+	String maxStr = "max";
+	String janeStr = "jane";
+	String sallyStr = "sally";
+	String testDayStr = "testDay";
 	
 	@Test
 	public void addGameSuccess() {
