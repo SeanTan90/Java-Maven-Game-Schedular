@@ -1,7 +1,7 @@
 package demo.project;
 
 public class PlayerRepo implements IPlayerRepo {
-	public Player[] players = new Player[5];
+	Player[] players = new Player[5];
 	
 	
 	

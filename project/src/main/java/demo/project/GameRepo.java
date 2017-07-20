@@ -1,7 +1,7 @@
 package demo.project;
 
 public class GameRepo implements IGameRepo {
-	public Game[] games = new Game[5];
+	Game[] games = new Game[5];
 
 	
 	public String save(Game g) {

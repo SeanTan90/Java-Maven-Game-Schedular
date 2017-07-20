@@ -14,6 +14,14 @@ public class Game {
 		this.noOfPlayers = noOfPlayers;
 	}
 	
+	public int getNoOfPlayers() {
+		return noOfPlayers;
+	}
+	
+	public void setNoOfPlayers(int noOfPlayers) {
+		this.noOfPlayers = noOfPlayers;
+	}
+	
 	public String getName() {
 		return name;
 		
@@ -21,14 +29,6 @@ public class Game {
 	
 	public void setName(String name) {
 		this.name = name;
-	}
-	
-	public int getNoOfPlayers() {
-		return noOfPlayers;
-	}
-	
-	public void setNoOfPlayers(int noOfPlayers) {
-		this.noOfPlayers = noOfPlayers;
 	}
 	
 
