@@ -1,7 +1,7 @@
 package demo.project;
 
 public class DayRepo implements IDayRepo {
-	public Day[] days = new Day[5];
+	Day[] days = new Day[5];
 	
 	
 	

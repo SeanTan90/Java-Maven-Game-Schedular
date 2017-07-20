@@ -104,20 +104,20 @@ public class SchedularService implements ISchedularService {
 	}
 
 	
-	public StringBuffer gameWiseReport(String gameName) {
-		StringBuffer sb3 = new StringBuffer(40);
+	public String gameWiseReport(String gameName) {
+		StringBuilder sb3 = new StringBuilder(40);
 		Player[] playerList = playerR.findAll();
 		Day[] dayList = dayR.findAll();
 		
-		if(gameName.equals("")) {
+		if("".equals(gameName)) {
 			sb3.append("Game's name should not be empty");
-			return sb3;
+			return sb3.toString();
 		}	
 		
 		
 		if(gameR.findOne(gameName) == null) {
 			sb3.append("Game does not exist in game repository");
-			return sb3;
+			return sb3.toString();
 		}
 		
 		
@@ -152,25 +152,25 @@ public class SchedularService implements ISchedularService {
 		}
 	
 
-	return sb3;
+	return sb3.toString();
 
 	}
 
 	
-	public StringBuffer playerWiseReport(String playerName) {
-		StringBuffer sb4 = new StringBuffer(40);
+	public String playerWiseReport(String playerName) {
+		StringBuilder sb4 = new StringBuilder(40);
 		Player playerObject = playerR.findOne(playerName);
 		Day[] dayList = dayR.findAll();
 		
-		if(playerName.equals("")) {
+		if("".equals(playerName)) {
 			sb4.append("Player's name should not be empty");
-			return sb4;
+			return sb4.toString();
 		}	
 		
 		
 		if(playerR.findOne(playerName) == null) {
 			sb4.append("Player does not exist in player repository");
-			return sb4;
+			return sb4.toString();
 		}
 		
 		
@@ -193,23 +193,23 @@ public class SchedularService implements ISchedularService {
 				}
 			}
 		}
-		return sb4;
+		return sb4.toString();
 	}
 
 	
-	public StringBuffer dayWiseReport(String dayName) {
-		StringBuffer sb5 = new StringBuffer(40);
+	public String dayWiseReport(String dayName) {
+		StringBuilder sb5 = new StringBuilder(40);
 		Day dayObject = dayR.findOne(dayName);
 		Player[] playerList = playerR.findAll();
 		
-		if(dayName.equals("")) {
+		if("".equals(dayName)) {
 			sb5.append("Day's name should not be empty");
-			return sb5;
+			return sb5.toString();
 		}		
 		
 		if(dayR.findOne(dayName) == null) {
 			sb5.append("Day does not exist in day repository");
-			return sb5;
+			return sb5.toString();
 		}
 		
 		
@@ -233,7 +233,7 @@ public class SchedularService implements ISchedularService {
 
 			}
 		}
-		return sb5;
+		return sb5.toString();
 
 	}
 

@@ -12,13 +12,13 @@ public interface ISchedularService {
 	public String createDay(Day d);
 		
 	
-	public StringBuffer gameWiseReport(String gameName);
+	public String gameWiseReport(String gameName);
 	
 	
-	public StringBuffer playerWiseReport(String playerName);
+	public String playerWiseReport(String playerName);
 		
 	
-	public StringBuffer dayWiseReport(String dayName);
+	public String dayWiseReport(String dayName);
 		
 
 }

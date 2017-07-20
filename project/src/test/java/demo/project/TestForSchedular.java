@@ -219,13 +219,11 @@ public class TestForSchedular {
 		
 		SchedularService testService = new SchedularService();
 		
-		Game basketball = new Game(basketballStr,2);
-		Game football = new Game(footballStr,3);
 		Game tennis = new Game(tennisStr,1);
 		
 		testService.createGame(tennis);
 		
-		Game[] gamesPlayedOnTestDay = new Game[5];
+		Game[] gamesPlayedOnTestDay = new Game[5]; // create a game array filled with null since uninitialized
 		
 		Day testDay = new Day(testDayStr,gamesPlayedOnTestDay );
 		testService.createDay(testDay);

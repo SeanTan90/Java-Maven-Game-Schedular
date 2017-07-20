@@ -1,6 +1,10 @@
 package demo.project;
 
 public class Main {
+	
+	private Main() {
+		//default no parameter constructor (private)
+	}
 
 	public static void main(String[] args) {
 		
