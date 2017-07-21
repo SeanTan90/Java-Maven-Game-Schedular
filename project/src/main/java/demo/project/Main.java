@@ -73,7 +73,7 @@ public class Main {
 		service.createDay(day4);
 		service.createDay(day5);
 		
-		System.out.println(service.gameWiseReport("basketball"));
+//		System.out.println(service.gameWiseReport("basketball"));
 		System.out.println(service.playerWiseReport("tom"));
 		System.out.println(service.dayWiseReport("day2"));
 	}
